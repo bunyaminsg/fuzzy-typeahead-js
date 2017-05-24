@@ -3,18 +3,39 @@
 <head>
 	<script src="typeahead.js"></script>
 	<style>
-		#data {
-			position: fixed;
-			top: 0;
-			right: 0;
-			padding: 10px;
-			border: 1px solid #ccc;
+		body {
+			font: 15px arial, sans-serif;
+			text-align: center;
 		}
+
+		.section {
+			display: inline-block;
+			width: 250px;
+			height: 500px;
+			border: 1px solid #ccc;
+			vertical-align: middle;
+			padding: 10px;
+		}
+
+		input {
+			border: none;
+			border-bottom: 1px solid #666;
+			padding: 5px 2px;
+		}
+
+		input:focus {
+			border-color: rgb(79,195,247);
+		}
+
+		b { color: rgb(1,87,155); }
 	</style>
 </head>
 <body>
-	<div id="data"></div>
-	<input id="input">
-	<div id="output"></div>
+	<div style="margin-bottom: 15px;"><b>Fuzzy Typeahead Search</b></div>
+	<div class="section">
+		<input id="input" placeholder="Search Name...">
+		<div id="output"></div>
+	</div>
+	<div class="section"  id="data"></div>
 </body>
 </html>
